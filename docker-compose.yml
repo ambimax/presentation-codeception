@@ -31,8 +31,12 @@ services:
             --startTunnel false
     networks:
       frontend:
-        aliases:
-          - zalenium.docker
+      aliases:
+      - zalenium.docker
+
+  # requirement for zalenium
+  selenium:
+    image: elgalu/selenium
 
 networks:
   frontend:
